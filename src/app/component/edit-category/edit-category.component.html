@@ -1,0 +1,53 @@
+
+<header>
+    <nav>
+      <div class="logo">
+        <img src="https://suanhahcm.net/wp-content/uploads/2019/07/mau-logo-quan-ca-phe-dep.jpg" alt="Logo">
+      </div>
+      <div class="title">
+        <h2>Trang Quản Lý Tiệm Coffee Tea</h2>
+      </div>
+      <ul class="navigation">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <br>
+  
+  <div class="update-product">
+      <h1>Update Product</h1>
+      <p class="message-p">{{productMessage}}</p>
+      <form #addProduct="ngForm"
+      (ngSubmit)="submit(addProduct.value)"
+       class="common-form">
+        <input
+          type="text"
+          class="form-input"
+          placeholder="Nhập tên sản phẩm"
+          name="name"
+          ngModel="{{categoryData?.name}}"
+        />
+    <textarea
+    type="text"
+    class="form-input"
+    placeholder="Nhập mô tả sản phẩm"
+    name="description"
+    ngModel="{{categoryData?.description}}"
+    ></textarea>
+  
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Nhập URL hình ảnh sản phẩm"
+    name="image_url"
+    ngModel="{{categoryData?.image_url}}"
+    />
+    <button class="form-button">Update category</button>
+  
+      </form>
+    </div>
+  

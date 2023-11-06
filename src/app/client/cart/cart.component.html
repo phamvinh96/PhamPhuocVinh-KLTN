@@ -1,0 +1,76 @@
+
+
+<div class="cart_section container">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="cart_container">
+                <div class="cart_title">Shopping Cart<small> (item in your cart) </small></div>
+                <div class="cart_items">
+                    <ul class="cart_list">
+                        <li class="cart_item clearfix" *ngFor="let item of cartService.items">
+                            <div class="cart_item_image"><img src="{{item.image_url}}" alt=""></div>
+                            <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                <div class="cart_item_name cart_info_col">
+                                    <div class="cart_item_title">Name</div>
+                                    <div class="cart_item_text">{{item.name}}</div>
+                                </div>
+                                <div class="cart_item_quantity cart_info_col">
+                                    <div class="cart_item_title">Quantity</div>
+                                    <div class="cart_item_text">{{item.quantity}}</div>
+                                </div>
+                                <div class="cart_item_price cart_info_col">
+                                    <div class="cart_item_title">Price</div>
+                                    <div class="cart_item_text">{{item.price | currency:'USD' }}</div>
+                                </div>
+                                <div class="cart_item_total cart_info_col">
+                                    <div class="cart_item_title">Total</div>
+                                    <div class="cart_item_text">{{item.price * item.quantity | currency:'USD'}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order_total">
+                    <div class="order_total_content text-md-right">
+                        <div class="order_total_title">Order Total:</div>
+                        <div class="order_total_amount">{{cartService.totalPrice | currency:'USD'}}</div>
+                    </div>
+                </div>
+                <div class="cart_buttons"> 
+                    <button type="button" class="button cart_button_clear" routerLink="/">Continue Shopping</button>
+                    <button type="button" class="button cart_button_checkout" routerLink="/order" >Checkout</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart" aria-modal="true" role="dialog">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-pill">{{cartService.items.length}}</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor="let item of cartService.items">
+            <div>
+              <h6 class="my-0">{{item.name}} * {{item.quantity}}</h6>
+              <small class="text-body-secondary">{{item.description}}</small>
+            </div>
+            <span class="text-body-secondary">{{item.price * item.quantity }}USD</span>
+            <button type="button" class="btn-close" (click)="removeFromCart(item)"></button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>{{cartService.totalPrice }} USD</strong>
+          </li>
+        </ul>
+        <button class="w-100 btn btn-primary btn-lg " routerLink="cart" type="submit">Card</button>
+        <button class="w-100 btn btn-primary btn-lg mt-2" data-bs-dismiss="offcanvas" aria-label="Close">Continue watching</button>
+      </div>
+    </div>
+</div>

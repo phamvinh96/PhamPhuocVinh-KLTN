@@ -1,0 +1,174 @@
+/* styles.css */
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button styles */
+.btn {
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.text-light {
+  color: #fff !important;
+}
+
+.ms-2 {
+  margin-left: 0.5rem !important;
+}
+
+/* Image styles */
+.table img {
+  max-width: 100px;
+}
+
+/* Additional styles as needed */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.text-light {
+  color: #fff !important;
+}
+
+.ms-2 {
+  margin-left: 0.5rem !important;
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+  /* Custom CSS for the form and modal */
+  .modal-dialog {
+    width: 900px; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .modal-header {
+    background-color: #f1f1f1;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .btn-close {
+    color: #000;
+    opacity: 0.5;
+  }
+  
+  .btn-close:hover {
+    opacity: 1;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .mb-3 {
+    flex-basis: calc(80% / 9); /* Each element occupies 1/9th of the available space */
+    margin-right: 10px; /* Adjust the gap size between columns as needed */
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+  
+  .form-control {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%; /* Adjust the width as needed */
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+
+
+
+  .centered-title {
+    text-align: center;
+}
+
+
+
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  margin: 0 10px;
+}
+
+
+

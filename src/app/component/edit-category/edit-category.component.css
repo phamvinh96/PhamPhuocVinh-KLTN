@@ -1,0 +1,154 @@
+header {
+    background-color: #458b74; /* Màu nền của header */
+    color: #fff; /* Màu chữ trong header */
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 100px;
+  }
+  
+  .logo img {
+    height: 100px;
+  }
+  
+  .title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .navigation {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navigation li {
+    margin-left: 10px;
+  }
+  
+  .navigation li:first-child {
+    margin-left: 0;
+  }
+  
+  
+  
+  
+  
+  
+  .navigation li {
+    display: inline-block; /* Hiển thị các mục điều hướng theo hàng ngang */
+    margin-right: 10px; /* Khoảng cách giữa các mục điều hướng */
+  }
+  
+  .navigation li:last-child {
+    margin-right: 0; /* Không có khoảng cách sau mục điều hướng cuối cùng */
+  }
+  
+  .navigation li a {
+    color: #fff; /* Màu chữ của các mục điều hướng */
+    text-decoration: none; /* Loại bỏ gạch chân */
+  }
+  
+  .navigation li a:hover {
+    color: #ff0000; /* Màu chữ khi di chuột qua */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Style the form container */
+  .update-product {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    /* Style the form heading */
+    .update-product h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    /* Style the message paragraph */
+    .update-product .message-p {
+      font-size: 16px;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+    
+    /* Style the form inputs */
+    .update-product input,
+    .update-product textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    /* Style the form button */
+    .update-product .form-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #0d6efd;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    /* Change the background color of the button on hover */
+    .update-product .form-button:hover {
+      background-color: #007bff;
+    }

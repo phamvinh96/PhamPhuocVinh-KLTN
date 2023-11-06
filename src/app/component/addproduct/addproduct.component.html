@@ -1,0 +1,128 @@
+<h3><a routerLink="/newproduct">Về Trang Admin</a></h3>
+<div class="add-product">
+  <h1>Add Product</h1>
+  <p class="message-p">{{ addProductMessage }}</p>
+  <form
+    #addProduct="ngForm"
+    (ngSubmit)="submit(addProduct.value)"
+    class="common-form"
+  >
+    <!-- <input
+     type="text"
+     class="form-input"
+     placeholder="STT"
+     name="id"
+     ngModel
+   /> -->
+
+   
+   <div class="text-left">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter product name"
+      name="name"
+      ngModel
+    />
+   </div>
+
+   
+   <div class="text-left">
+    <label for="price">price:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder=" Enter product price"
+      name="price"
+      ngModel
+    />
+   </div>
+
+   
+   <div class="text-left">
+    <label for="quantity">quantity:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter product quantity"
+      name="quantity"
+      ngModel
+    />
+   </div>
+
+   
+   
+   <div class="text-left">
+    <label for="category_id">category:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter product Categories"
+      name="category_id"
+      ngModel
+    />
+   </div>
+
+
+   
+   
+   <div class="text-left">
+    <label for="color">color:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter product color"
+      name="color"
+      ngModel
+    />
+   </div>
+
+    <div class="text-left">
+      <label for="brand">brand:</label>
+      <select type="text" class="form-input" name="brand" ngModel>
+        <option value="Tocoto">Tocoto</option>
+        <option value=" Viwat">Viwat</option>
+        <option value="YORS">YORS</option>
+      </select>
+    </div>
+
+
+    <div class="text-left">
+      <label for="material">Material:</label>
+      <select type="text" class="form-input" name="material" ngModel>
+        <option value="Trà">Trà</option>
+        <option value=" Bột Trà sữa">Bột Trà sữa</option>
+        <option value="Trân châu và thạch">Trân châu và thạch</option>
+        <option value="Kem sữa nguyên kem Cheesee">Kem sữa nguyên kem Cheesee</option>
+        <option value="Gold plated">Gold plated</option>
+      </select>
+    </div>
+
+
+
+    <div class="text-left">
+      <label for="description">description:</label>
+      <textarea
+        type="text"
+        class="form-input"
+        placeholder="Enter product description"
+        name="description"
+        ngModel
+      ></textarea>
+    </div>
+
+
+    <div class="text-left">
+      <label for="image_url">image:</label>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter product image_url"
+      name="image_url"
+      ngModel
+    />
+    </div>
+    <button class="form-button">ADD PRODUCT</button>
+  </form>
+</div>
